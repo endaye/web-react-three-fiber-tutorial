@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import Experience from "./components/Experience";
 import "./App.css";
+import Configurator from "./components/Configurator";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
         <fog attach="fog" args={["#213547", 12, 20]} />
         <Experience />
       </Canvas>
+      <Configurator />
     </div>
   );
 };
