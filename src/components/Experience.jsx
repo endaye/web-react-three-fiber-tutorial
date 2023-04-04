@@ -6,9 +6,7 @@ const Experience = () => {
   return (
     <PresentationControls speed={1.5} global={true} zoom={0.7} polar={[-0.1, Math.PI / 4]}>
       <Stage environment="city" intensity={0.6} castShadow={false}>
-        <Suspense fallback={null}>
-          <Chair />
-        </Suspense>
+        <Chair />
       </Stage>
       <mesh rotation={[-Math.PI / 2, 0, 0]}>
         <planeGeometry args={[170, 170]} />
