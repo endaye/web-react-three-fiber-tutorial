@@ -10,7 +10,7 @@ import { useCustomization } from "../contexts/Customization";
 
 const Chair = (props) => {
   const { nodes, materials } = useGLTF("./models/chair.gltf");
-  const { material } = useCustomization();
+  const { material, legs } = useCustomization();
 
   const leatherTextureProps = useTexture({
     map: "./textures/leather/Leather_008_Base Color.jpg",
@@ -64,8 +64,8 @@ const Chair = (props) => {
       <mesh geometry={nodes.Cushion.geometry} position={[0, 0.06, 0.04]}>
         <meshStandardMaterial {...fabricTextureProps} />
       </mesh>
-      <mesh geometry={nodes.Legs1.geometry} material={materials.Legs} />
-      <mesh geometry={nodes.Legs2.geometry} material={materials.Legs} visible={false} />
+      <mesh geometry={nodes.Legs1.geometry} material={materials.Legs} visible={legs === 1} />
+      <mesh geometry={nodes.Legs2.geometry} material={materials.Legs} visible={legs === 2} />
     </group>
   );
 };

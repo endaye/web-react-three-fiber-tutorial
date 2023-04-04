@@ -21,6 +21,10 @@
   bottom: 25vh;
   color: white;
   padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .configurator__section__title {
@@ -38,12 +42,11 @@
 .item__label {
   font-size: 12px;
   color: #acacac;
-  transition: .4s color;
+  transition: 0.4s color;
 }
 
 .item {
-  transition: .4s opacity;
-
+  transition: 0.4s opacity;
 }
 
 .item:hover {
@@ -53,5 +56,4 @@
 
 .item.item--active .item__label {
   color: white;
-
 }
