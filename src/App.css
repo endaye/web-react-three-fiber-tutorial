@@ -33,10 +33,11 @@
 }
 
 .configurator__section__values {
+  margin-top: 24px;
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-top: 24px;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
 .item__label {
@@ -45,8 +46,18 @@
   transition: 0.4s color;
 }
 
+.item__dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: solid 2px #999999;
+}
+
 .item {
   transition: 0.4s opacity;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .item:hover {
@@ -56,4 +67,8 @@
 
 .item.item--active .item__label {
   color: white;
+}
+
+.item.item--active .item__dot {
+  border: solid 2px white;
 }
