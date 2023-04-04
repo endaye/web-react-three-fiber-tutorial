@@ -38,9 +38,20 @@
 .item__label {
   font-size: 12px;
   color: #acacac;
+  transition: .4s color;
+}
+
+.item {
+  transition: .4s opacity;
+
 }
 
 .item:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+.item.item--active .item__label {
+  color: white;
+
 }
